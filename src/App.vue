@@ -1,26 +1,58 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1 class="nav">Coding Challenge</h1>
+  <p>Jamar Riley</p>
+  <button class="button__nav" @click="activeBtn">Frequency Counter</button>
+  <mcv-frequency-component v-if="active"></mcv-frequency-component>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import mcvFrequencyComponent from "@/components/FrequencyComponent.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    mcvFrequencyComponent,
+  },
+  data() {
+    return {
+      active: false,
+    };
+  },
+  methods: {
+    activeBtn() {
+      this.active = !this.active;
+    },
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.nav {
+  width: 100%;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-size: x-large;
+
+  background: #2ddf5c;
+  padding: 1.5rem 1rem;
+  position: relative;
+}
+
+.button__nav {
+  display: flex;
+  margin: auto;
+  margin-top: 1.5rem;
+  background: #0c9ca6;
+  color: white;
+  font: inherit;
+  border: 1.5px solid #0e4f1f;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.button__nav:hover,
+.button__nav:active {
+  background: white;
+  color: #0e4f1f;
 }
 </style>
