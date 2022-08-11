@@ -1,7 +1,14 @@
 <template>
-  <h1 class="nav">Coding Challenge</h1>
-  <p>Jamar Riley</p>
-  <button class="button__nav" @click="activeBtn">Frequency Counter</button>
+  <div class="nav">
+    <h1>Coding Challenge</h1>
+    <p>Jamar Riley</p>
+  </div>
+  <div class="button__row">
+    <button class="button__counter" @click="activeBtn">
+      Frequency Counter
+    </button>
+    <button class="button__calculator" @click="activeBtn">Calculator</button>
+  </div>
   <mcv-frequency-component v-if="active"></mcv-frequency-component>
 </template>
 
@@ -28,16 +35,19 @@ export default {
 
 <style>
 .nav {
-  width: 100%;
   text-align: center;
-  font-size: x-large;
+  font-size: large;
 
   background: #2ddf5c;
-  padding: 1.5rem 1rem;
-  position: relative;
+  padding: 0.1rem;
 }
 
-.button__nav {
+.button__row {
+  display: flex;
+  justify-content: center;
+}
+
+.button__counter {
   display: flex;
   margin: auto;
   margin-top: 1.5rem;
@@ -50,8 +60,26 @@ export default {
   font-weight: normal;
   cursor: pointer;
 }
-.button__nav:hover,
-.button__nav:active {
+.button__counter:hover,
+.button__counter:active {
+  background: white;
+  color: #0e4f1f;
+}
+.button__calculator {
+  display: flex;
+  margin: auto;
+  margin-top: 1.5rem;
+  background: #0e4f1f;
+  color: white;
+  font: inherit;
+  border: 1.5px solid #0e4f1f;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.button__calculator:hover,
+.button__calculator:active {
   background: white;
   color: #0e4f1f;
 }
