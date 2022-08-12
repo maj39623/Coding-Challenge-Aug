@@ -73,14 +73,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 h1 {
-  color: blue;
+  color: #16123f;
   text-align: center;
 }
 
 h2 {
-  color: rgb(7, 17, 14);
+  color: #16123f;
   text-align: center;
 }
 
@@ -100,8 +100,8 @@ h2 {
   display: block;
   margin: auto;
   margin-top: 1.5rem;
-  background: #0e4f1f;
-  color: white;
+  background: #abd699;
+  color: black;
   font: inherit;
   border: 1.5px solid #0e4f1f;
   padding: 0.5rem;
@@ -112,7 +112,7 @@ h2 {
 .button:hover,
 .button:active {
   background: white;
-  color: #0e4f1f;
+  color: #16123f;
 }
 
 li {
